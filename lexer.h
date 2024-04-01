@@ -30,6 +30,7 @@ typedef struct {
   int value;
 } TokenLiteral;
 
+TokenLiteral lit2tok(char current, FILE *file);
 void readFile(FILE *file);
 
 #endif
