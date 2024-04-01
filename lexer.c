@@ -1,35 +1,60 @@
+/**********************************************************************/
+/* Swe++ - Lexer OBJECT                                               */
+/**********************************************************************/
+
+/**********************************************************************/
+/* Other OBJECT's METHODS (IMPORTED)                                  */
+/**********************************************************************/
 #include "lexer.h"
 
-TokenLiteral lit2tok(char current, FILE *file) {
-  TokenLiteral token;
-  token.type = INT;
-  int value = 0;
-  while(isdigit(current) && current != EOF) {
-    value += (int) current - '0';
-    printf("%c", current);
-    current = fgetc(file);
-  }
-  printf("\n");
-  token.value = value;
-  return token;
+/**********************************************************************/
+/*  PRIVATE METHODS for this OBJECT   (using "static" in C)           */
+/**********************************************************************/
+/**********************************************************************/
+/*  buffer function                                                   */
+/**********************************************************************/
+/**********************************************************************/
+/*  Read the input file into the buffer                               */
+/**********************************************************************/
+
+static void get_prog() {
+  printf("\n *** TO BE DONE");
 }
 
-void readFile(FILE *file) {
-  char current = fgetc(file);
+/**********************************************************************/
+/*  Display the buffer                                                */
+/**********************************************************************/
 
-  while(current != EOF) {
-    if(current == ';') {
-      printf("FOUND SEMICOLON\n");
-    } else if(current == '(') {
-      printf("FOUND OPEN PAREN\n");
-    } else if(current == ')') {
-      printf("FOUND CLOSE PAREN\n");
-    } else if(isdigit(current)) {
-      lit2tok(current, file);
-      //printf("FOUND DIGIT: %d\n", current - '0');
-    } else if(isalpha(current)) {
-      printf("FOUND CHARACTER: %c\n", current);
-    }
-    current = fgetc(file);
-  }
+static void pbuffer() {
+  printf("\n *** TO BE DONE");
 }
+
+/**********************************************************************/
+/* End of buffer handling functions                                   */
+/**********************************************************************/
+/**********************************************************************/
+/*  PUBLIC METHODS for this OBJECT  (EXPORTED)                        */
+/**********************************************************************/
+/**********************************************************************/
+/* Return a token                                                     */
+/**********************************************************************/
+
+int get_token()
+{  
+   //lex2tok
+   printf("\n *** TO BE DONE"); return 0;
+   }
+
+/**********************************************************************/
+/* Return a lexeme                                                    */
+/**********************************************************************/
+
+char * get_lexeme()
+{  
+   //tok2lex
+   printf("\n *** TO BE DONE");  return "$";
+   }
+
+/**********************************************************************/
+/* End of code                                                        */
+/**********************************************************************/

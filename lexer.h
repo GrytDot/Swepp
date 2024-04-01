@@ -3,34 +3,18 @@
 
 #include "main.h"
 
-typedef enum {
-  SEMI,
-  OPEN_PAREN,
-  CLOSE_PAREN,
-} TypeSeparator;
+#define BUFSIZE 1024
+#define LEXSIZE 30
+static char buffer[BUFSIZE];
+static char lexbuf[LEXSIZE];
+static int  pbuf  = 0;          /* current index program buffer */
+static int  plex  = 0;          /* current index lexeme  buffer */
 
-typedef enum {
-  EXIT,
-} TypeKeyword;
+/**********************************************************************/
+/*  PUBLIC METHODS for this OBJECT  (EXPORTED)                        */
+/**********************************************************************/
 
-typedef enum {
-  INT, 
-} TypeLiteral;
-
-typedef struct {
-  TypeSeparator type;
-} TokenSeparator;
-
-typedef struct {
-  TypeKeyword type;
-} TokenKeyword;
-
-typedef struct {
-  TypeLiteral type;
-  int value;
-} TokenLiteral;
-
-TokenLiteral lit2tok(char current, FILE *file);
-void readFile(FILE *file);
+int    get_token();
+char * get_lexeme();
 
 #endif
