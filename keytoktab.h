@@ -19,14 +19,29 @@
 /**********************************************************************/
 #define nfound -1
 
-typedef enum tvalues { tstart=257,
-                  id, number, assign, predef, tempty, undef, error, typ,
-                  tend,
-               kstart,
-                  program, input, output, var,
-                  begin, end, boolean, integer, real,
-                  kend 
-                  } toktyp;
+typedef enum tvalues { 
+  tstart=257,
+  id,
+  number,
+  assign,
+  predef,
+  tempty,
+  undef,
+  error,
+  typ,
+  tend,
+  kstart,
+  program,
+  input,
+  output,
+  var,
+  begin,
+  end,
+  boolean,
+  integer,
+  real,
+  kend 
+} toktyp;
 
 
 /**********************************************************************/

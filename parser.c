@@ -3,17 +3,11 @@
 /**********************************************************************/
 
 /**********************************************************************/
-/* Include files                                                      */
-/**********************************************************************/
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-
-/**********************************************************************/
 /* Other OBJECT's METHODS (IMPORTED)                                  */
 /**********************************************************************/
- #include "keytoktab.h"              /* when the keytoktab is added   */
- #include "lexer.h"                  /* when the lexer     is added   */
+ #include "parser.h"
+ #include "keytoktab.h"              
+ #include "lexer.h"                  
 /* #include "symtab.h"      */       /* when the symtab    is added   */
 /* #include "optab.h"       */       /* when the optab     is added   */
 
@@ -39,11 +33,10 @@ static int tokens[] = {program, id, '(', input, ',', output, ')', ';',
 /**********************************************************************/
 /*  Simulate the lexer -- get the next token from the buffer          */
 /**********************************************************************/
-static int pget_token()
-{  
+static int pget_token() {  
    static int i=0;
    if (tokens[i] != '$') return tokens[i++]; else return '$';
-   }
+}
 
 /**********************************************************************/
 /*  PRIVATE METHODS for this OBJECT  (using "static" in C)            */

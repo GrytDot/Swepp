@@ -43,7 +43,7 @@ int get_token()
 {  
    //lex2tok
    printf("\n *** TO BE DONE"); return 0;
-   }
+}
 
 /**********************************************************************/
 /* Return a lexeme                                                    */
@@ -53,7 +53,7 @@ char * get_lexeme()
 {  
    //tok2lex
    printf("\n *** TO BE DONE");  return "$";
-   }
+}
 
 /**********************************************************************/
 /* End of code                                                        */
