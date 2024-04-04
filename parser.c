@@ -27,8 +27,17 @@ static int  is_parse_ok=1;
 /**********************************************************************/
 /* Simulate the token stream for a given program                      */
 /**********************************************************************/
-static int tokens[] = {program, id, '(', input, ',', output, ')', ';',
-               '$' };
+static int tokens[] = {
+  program,
+  id,
+  '(',
+  input,
+  ',',
+  output,
+  ')',
+  ';',
+  '$'
+} ;
 
 /**********************************************************************/
 /*  Simulate the lexer -- get the next token from the buffer          */
@@ -54,8 +63,8 @@ static void match(int t)
       is_parse_ok=0;
       printf("\n *** Unexpected Token: expected: %4d found: %4d (in match)",
               t, lookahead);
-      }
    }
+}
 
 /**********************************************************************/
 /* The grammar functions                                              */
@@ -65,7 +74,7 @@ static void program_header()
    if (DEBUG) printf("\n *** In  program_header");
    match(program); match(id); match('('); match(input);
    match(','); match(output); match(')'); match(';');
-   }
+}
    
 /**********************************************************************/
 /*  PUBLIC METHODS for this OBJECT  (EXPORTED)                        */
@@ -77,7 +86,7 @@ int parser()
    lookahead = pget_token();       // get the first token
    program_header();               // call the first grammar rule
    return is_parse_ok;             // status indicator
-   }
+}
 
 /**********************************************************************/
 /* End of code                                                        */

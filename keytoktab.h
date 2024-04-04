@@ -69,7 +69,7 @@ typedef struct tab {
 /* data objects (tables)                                              */
 /**********************************************************************/
 static tab tokentab[ ] = {
-        {"id", 	        id},
+  {"id", 	        id},
 	{"number", 	number},
 	{":=", 	        assign},
 	{"undef", 	undef},
@@ -90,7 +90,7 @@ static tab tokentab[ ] = {
 	{";",            ';'},
 	{"=",            '='},
 	{"TERROR", 	nfound}
-        };
+  } ;
 
 
 static tab keywordtab[ ] = {
